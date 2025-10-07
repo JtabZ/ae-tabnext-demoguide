@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Demo Reality Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .tab-button.active {
+            background-color: #3B82F6;
+            color: white;
+        }
+        .content-section {
+            display: none;
+        }
+        .content-section.active {
+            display: block;
+        }
+        .demo-tier {
+            transition: all 0.3s ease;
+        }
+        .demo-tier:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-gray-50 to-blue-50">
+    <div class="max-w-6xl mx-auto p-8">
+        <!-- Header -->
+        <div class="bg-white rounded-xl shadow-lg p-8 mb-8">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">📊 Analytics Demo Reality Guide</h1>
+            <p class="text-lg text-gray-600 mb-2">A Practical Guide for AEs: Tableau Next, AI Expectations, and Demo Timelines</p>
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mt-4">
+                <p class="text-sm text-blue-900">
+                    <strong>The One-Liner:</strong> "AI raised the bar for what 'good' looks like in analytics demos, but it didn't lower the bar for how long it takes us to build them—let's scope accordingly."
+                </p>
+            </div>
+        </div>
+
+        <!-- Tab Navigation -->
+        <div class="bg-white rounded-xl shadow-lg mb-8 overflow-hidden">
+            <div class="flex border-b border-gray-200">
+                <button onclick="showTab('current-state')" class="tab-button active flex-1 px-6 py-4 font-semibold text-gray-700 hover:bg-gray-50 transition-colors">
+                    Current State
+                </button>
+                <button onclick="showTab('demo-tiers')" class="tab-button flex-1 px-6 py-4 font-semibold text-gray-700 hover:bg-gray-50 transition-colors">
+                    Demo Tiers
+                </button>
+                <button onclick="showTab('whats-realistic')" class="tab-button flex-1 px-6 py-4 font-semibold text-gray-700 hover:bg-gray-50 transition-colors">
+                    What's Realistic
+                </button>
+                <button onclick="showTab('how-to-partner')" class="tab-button flex-1 px-6 py-4 font-semibold text-gray-700 hover:bg-gray-50 transition-colors">
+                    Partnership Guide
+                </button>
+            </div>
+
+            <!-- Current State Tab -->
+            <div id="current-state" class="content-section active p-8">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">The Current State of Analytics Demos</h2>
+                
+                <div class="grid md:grid-cols-2 gap-6 mb-8">
+                    <!-- What Changed -->
+                    <div class="bg-yellow-50 border-2 border-yellow-300 rounded-lg p-6">
+                        <h3 class="text-xl font-bold text-yellow-900 mb-4">⚡ What AI Changed</h3>
+                        <ul class="space-y-2 text-sm text-yellow-800">
+                            <li>✅ <strong>Faster insights</strong> - AI analyzes data in seconds</li>
+                            <li>✅ <strong>Natural language</strong> - Ask questions conversationally</li>
+                            <li>✅ <strong>Automated discovery</strong> - AI finds patterns automatically</li>
+                            <li>✅ <strong>Smarter recommendations</strong> - Next best actions suggested</li>
+                            <li>✅ <strong>Higher expectations</strong> - Customers expect ChatGPT-like experiences</li>
+                        </ul>
+                    </div>
+
+                    <!-- What Didn't Change -->
+                    <div class="bg-red-50 border-2 border-red-300 rounded-lg p-6">
+                        <h3 class="text-xl font-bold text-red-900 mb-4">🚧 What Didn't Change</h3>
+                        <ul class="space-y-2 text-sm text-red-800">
+                            <li>❌ <strong>Data prep time</strong> - Still need to connect sources</li>
+                            <li>❌ <strong>Data modeling</strong> - Still need to define relationships</li>
+                            <li>❌ <strong>Business logic</strong> - Still need to define metrics</li>
+                            <li>❌ <strong>Demo org setup</strong> - Still need clean, realistic data</li>
+                            <li>❌ <strong>Testing & QA</strong> - Still need to validate everything works</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Tableau Next Status -->
+                <div class="bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg p-6 mb-6">
+                    <h3 class="text-xl font-bold mb-3">🔮 Tableau Next Status</h3>
+                    <div class="grid md:grid-cols-2 gap-4 text-sm">
+                        <div>
+                            <p class="font-semibold mb-2">What It Will Do (When GA):</p>
+                            <ul class="space-y-1 opacity-90">
+                                <li>• AI-powered data prep & modeling</li>
+                                <li>• Conversational analytics interface</li>
+                                <li>• Automated insight generation</li>
+                                <li>• Faster time-to-insight</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="font-semibold mb-2">Current Reality:</p>
+                            <ul class="space-y-1 opacity-90">
+                                <li>• <strong>Not Generally Available yet</strong></li>
+                                <li>• Limited preview/beta access</li>
+                                <li>• Can't rely on it for customer demos</li>
+                                <li>• Traditional demo approach still required</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- The Gap -->
+                <div class="bg-white border-2 border-gray-300 rounded-lg p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">📐 The Gap Between Expectation & Reality</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-blue-100 rounded-full p-3 flex-shrink-0">
+                                <span class="text-2xl">👥</span>
+                            </div>
+                            <div>
+                                <p class="font-bold text-gray-900">What Customers Expect:</p>
+                                <p class="text-sm text-gray-700">"Show me an AI agent that answers any question about my business instantly—just like ChatGPT"</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="bg-orange-100 rounded-full p-3 flex-shrink-0">
+                                <span class="text-2xl">⚙️</span>
+                            </div>
+                            <div>
+                                <p class="font-bold text-gray-900">What It Actually Requires:</p>
+                                <p class="text-sm text-gray-700">Connect 5+ data sources → Build unified data model → Define business metrics → Configure AI → Train on their domain → Test & validate → Deploy</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="bg-green-100 rounded-full p-3 flex-shrink-0">
+                                <span class="text-2xl">⏱️</span>
+                            </div>
+                            <div>
+                                <p class="font-bold text-gray-900">Timeline Reality:</p>
+                                <p class="text-sm text-gray-700">Simple demo: 1-2 weeks | Industry-specific: 2-4 weeks | Full platform: 4-8 weeks</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Demo Tiers Tab -->
+            <div id="demo-tiers" class="content-section p-8">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Demo Tier Framework</h2>
+                <p class="text-gray-600 mb-8">Choose the right demo tier based on deal stage, timeline, and customer expectations.</p>
+
+                <div class="space-y-6">
+                    <!-- Tier 1 -->
+                    <div class="demo-tier bg-gradient-to-r from-green-50 to-green-100 border-2 border-green-300 rounded-xl p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <div>
+                                <h3 class="text-2xl font-bold text-green-900">Tier 1: Quick Hit</h3>
+                                <p class="text-green-700 font-semibold">Analytics-Focused Demo</p>
+                            </div>
+                            <div class="bg-green-600 text-white px-4 py-2 rounded-full font-bold">
+                                1-2 Weeks
+                            </div>
+                        </div>
+                        <div class="grid md:grid-cols-3 gap-4 text-sm">
+                            <div>
+                                <p class="font-bold text-green-900 mb-2">Best For:</p>
+                                <ul class="space-y-1 text-green-800">
+                                    <li>• Discovery calls</li>
+                                    <li>• Early-stage deals</li>
+                                    <li>• Capability proof</li>
+                                    <li>• Quick turnaround needs</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <p class="font-bold text-green-900 mb-2">What You Get:</p>
+                                <ul class="space-y-1 text-green-800">
+                                    <li>• Pre-built demo data</li>
+                                    <li>• Standard dashboards</li>
+                                    <li>• 1-2 AI capabilities</li>
+                                    <li>• Generic use case</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <p class="font-bold text-green-900 mb-2">Trade-offs:</p>
+                                <ul class="space-y-1 text-green-800">
+                                    <li>• Not industry-specific</li>
+                                    <li>• Limited customization</li>
+                                    <li>• May feel generic</li>
+                                    <li>• Single product focus</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tier 2 -->
+                    <div class="demo-tier bg-gradient-to-r from-yellow-50 to-yellow-100 border-2 border-yellow-400 rounded-xl p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <div>
+                                <h3 class="text-2xl font-bold text-yellow-900">Tier 2: Business Case</h3>
+                                <p class="text-yellow-700 font-semibold">Industry-Utilized Demo</p>
+                            </div>
+                            <div class="bg-yellow-600 text-white px-4 py-2 rounded-full font-bold">
+                                2-4 Weeks
+                            </div>
+                        </div>
+                        <div class="grid md:grid-cols-3 gap-4 text-sm">
+                            <div>
+                                <p class="font-bold text-yellow-900 mb-2">Best For:</p>
+                                <ul class="space-y-1 text-yellow-800">
+                                    <li>• Competitive situations</li>
+                                    <li>• Mid-stage evaluation</li>
+                                    <li>• Business case building</li>
+                                    <li>• Industry-specific needs</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <p class="font-bold text-yellow-900 mb-2">What You Get:</p>
+                                <ul class="space-y-1 text-yellow-800">
+                                    <li>• Industry-specific data</li>
+                                    <li>• Custom dashboards</li>
+                                    <li>• 3-5 AI capabilities</li>
+                                    <li>• Relevant use cases</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <p class="font-bold text-yellow-900 mb-2">Trade-offs:</p>
+                                <ul class="space-y-1 text-yellow-800">
+                                    <li>• Requires more lead time</li>
+                                    <li>• Data modeling needed</li>
+                                    <li>• Multiple products involved</li>
+                                    <li>• More SE time required</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tier 3 -->
+                    <div class="demo-tier bg-gradient-to-r from-red-50 to-red-100 border-2 border-red-400 rounded-xl p-6">
+                        <div class="flex items-start justify-between mb-4">
+                            <div>
+                                <h3 class="text-2xl font-bold text-red-900">Tier 3: Platform Vision</h3>
+                                <p class="text-red-700 font-semibold">Full Ecosystem Demo</p>
+                            </div>
+                            <div class="bg-red-600 text-white px-4 py-2 rounded-full font-bold">
+                                4-8 Weeks
+                            </div>
+                        </div>
+                        <div class="grid md:grid-cols-3 gap-4 text-sm">
+                            <div>
+                                <p class="font-bold text-red-900 mb-2">Best For:</p>
+                                <ul class="space-y-1 text-red-800">
+                                    <li>• Enterprise deals</li>
+                                    <li>• C-level presentations</li>
+                                    <li>• Strategic accounts</li>
+                                    <li>• Platform selling</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <p class="font-bold text-red-900 mb-2">What You Get:</p>
+                                <ul class="space-y-1 text-red-800">
+                                    <li>• Multi-cloud integration</li>
+                                    <li>• End-to-end journeys</li>
+                                    <li>• Full AI agent showcase</li>
+                                    <li>• Custom to their business</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <p class="font-bold text-red-900 mb-2">Trade-offs:</p>
+                                <ul class="space-y-1 text-red-800">
+                                    <li>• Significant time investment</li>
+                                    <li>• Complex data setup</li>
+                                    <li>• Multiple SE resources</li>
+                                    <li>• Ongoing maintenance</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 bg-blue-50 border-l-4 border-blue-500 p-6 rounded">
+                    <p class="font-bold text-blue-900 mb-2">💡 Pro Tip:</p>
+                    <p class="text-sm text-blue-800">Most deals don't need Tier 3. Tier 2 demos often win just as effectively with half the investment. Let's align on the right tier for each opportunity.</p>
+                </div>
+            </div>
+
+            <!-- What's Realistic Tab -->
+            <div id="whats-realistic" class="content-section p-8">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">What's Realistic in Your Timeline?</h2>
+
+                <div class="bg-white border-2 border-gray-300 rounded-lg p-6 mb-6">
+                    <h3 class="text-lg font-bold text-gray-900 mb-4">Interactive Timeline Calculator</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">When do you need the demo?</label>
+                            <select id="timeline-select" onchange="calculateRealistic()" class="w-full p-3 border-2 border-gray-300 rounded-lg">
+                                <option value="">Select timeline...</option>
+                                <option value="1">1 week or less</option>
+                                <option value="2">2 weeks</option>
+                                <option value="3">3 weeks</option>
+                                <option value="4">4 weeks</option>
+                                <option value="6">6+ weeks</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Deal stage?</label>
+                            <select id="stage-select" onchange="calculateRealistic()" class="w-full p-3 border-2 border-gray-300 rounded-lg">
+                                <option value="">Select stage...</option>
+                                <option value="discovery">Discovery / Early Stage</option>
+                                <option value="evaluation">Evaluation / Mid-Stage</option>
+                                <option value="decision">Decision / Final Stage</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="recommendation-output" class="hidden">
+                    <!-- Recommendation will be inserted here -->
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6 mt-8">
+                    <!-- Common Requests -->
+                    <div class="bg-white border-2 border-gray-300 rounded-lg p-6">
+                        <h3 class="text-lg font-bold text-gray-900 mb-4">Common Requests & Reality</h3>
+                        <div class="space-y-4 text-sm">
+                            <div class="border-l-4 border-blue-500 pl-4">
+                                <p class="font-bold text-gray-900">"Show customer 360 with AI insights"</p>
+                                <p class="text-gray-600">Reality: 2-3 weeks (need unified profiles, data modeling)</p>
+                            </div>
+                            <div class="border-l-4 border-purple-500 pl-4">
+                                <p class="font-bold text-gray-900">"Predictive analytics with automated actions"</p>
+                                <p class="text-gray-600">Reality: 3-4 weeks (need model training, workflow setup)</p>
+                            </div>
+                            <div class="border-l-4 border-orange-500 pl-4">
+                                <p class="font-bold text-gray-900">"Full platform demo with AI agents"</p>
+                                <p class="text-gray-600">Reality: 6-8 weeks (multi-cloud integration, extensive testing)</p>
+                            </div>
+                            <div class="border-l-4 border-green-500 pl-4">
+                                <p class="font-bold text-gray-900">"Simple dashboard with basic insights"</p>
+                                <p class="text-gray-600">Reality: 1 week (if we have existing data/templates)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Where Time Goes -->
+                    <div class="bg-white border-2 border-gray-300 rounded-lg p-6">
+                        <h3 class="text-lg font-bold text-gray-900 mb-4">Where Demo Time Goes</h3>
+                        <div class="space-y-3">
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span class="font-semibold text-gray-700">Data Connection & Setup</span>
+                                    <span class="text-gray-600">30%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-3">
+                                    <div class="bg-blue-500 h-3 rounded-full" style="width: 30%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span class="font-semibold text-gray-700">Data Modeling & Organization</span>
+                                    <span class="text-gray-600">25%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-3">
+                                    <div class="bg-green-500 h-3 rounded-full" style="width: 25%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span class="font-semibold text-gray-700">Building Dashboards/Analytics</span>
+                                    <span class="text-gray-600">20%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-3">
+                                    <div class="bg-orange-500 h-3 rounded-full" style="width: 20%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span class="font-semibold text-gray-700">AI/Agent Configuration</span>
+                                    <span class="text-gray-600">15%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-3">
+                                    <div class="bg-purple-500 h-3 rounded-full" style="width: 15%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span class="font-semibold text-gray-700">Testing & QA</span>
+                                    <span class="text-gray-600">10%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-3">
+                                    <div class="bg-red-500 h-3 rounded-full" style="width: 10%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-4 italic">Note: These are averages. Complex demos may require more data work.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Partnership Guide Tab -->
+            <div id="how-to-partner" class="content-section p-8">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">How to Partner Effectively</h2>
+
+                <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl p-8 mb-8">
+                    <h3 class="text-2xl font-bold mb-4">🤝 Our Shared Goal</h3>
+                    <p class="text-lg mb-4">Win more deals by delivering impactful demos that match customer expectations AND our timeline reality.</p>
+                    <p class="text-sm opacity-90">This isn't about saying "no"—it's about being strategic together on what will actually close the deal.</p>
+                </div>
+
+                <div class="space-y-6">
+                    <!-- Quick Start Checklist -->
+                    <div class="bg-white border-2 border-gray-300 rounded-lg p-6">
+                        <h3 class="text-lg font-bold text-gray-900 mb-4">✅ Demo Request Checklist</h3>
+                        <p class="text-sm text-gray-600 mb-4">When requesting a demo, help me help you by answering:</p>
+                        <div class="grid md:grid-cols-2 gap-4 text-sm">
+                            <div class="space-y-2">
+                                <label class="flex items-start gap-2">
+                                    <input type="checkbox" class="mt-1">
+                                    <span><strong>Deal stage:</strong> Discovery / Evaluation / Decision</span>
+                                </label>
+                                <label class="flex items-start gap-2">
+                                    <input type="checkbox" class="mt-1">
+                                    <span><strong>Timeline:</strong> When is the demo date?</span>
+                                </label>
+                                <label class="flex items-start gap-2">
+                                    <input type="checkbox" class="mt-1">
+                                    <span><strong>Audience:</strong> Who will be in the demo?</span>
+                                </label>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="flex items-start gap-2">
+                                    <input type="checkbox" class="mt-1">
+                                    <span><strong>Must-haves:</strong> Top 3 capabilities to show</span>
+                                </label>
+                                <label class="flex items-start gap-2">
+                                    <input type="checkbox" class="mt-1">
+                                    <span><strong>Nice-to-haves:</strong> What would be a bonus?</span>
+                                </label>
+                                <label class="flex items-start gap-2">
+                                    <input type="checkbox" class="mt-1">
+                                    <span><strong>Competitor context:</strong> What are they showing?</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Communication Templates -->
+                    <div class="bg-white border-2 border-gray-300 rounded-lg p-6">
+                        <h3 class="text-lg font-bold text-gray-900 mb-4">💬 Sample Conversation Starters</h3>
+                        <div class="space-y-4">
+                            <div class="bg-blue-50 border-l-4 border-blue-500 p-4">
+                                <p class="font-bold text-blue-900 mb-2">When you need a quick demo:</p>
+                                <p class="text-sm text-blue-800 italic">"Hey [SE Name], I have a demo in [X days]. Given the timeline, what's the strongest Tier 1 demo we can deliver that will move this deal forward?"</p>
+                            </div>
+                            <div class="bg-green-50 border-l-4 border-green-500 p-4">
+                                <p class="font-bold text-green-900 mb-2">When customer asks for something complex:</p>
+                                <p class="text-sm text-green-800 italic">"The customer is asking for [capability]. I know that's complex—can we do a scaled version now and show them a roadmap to the full version?"</p>
+                            </div>
+                            <div class="bg-purple-50 border-l-4 border-purple-500 p-4">
+                                <p class="font-bold text-purple-900 mb-2">When planning ahead:</p>
+                                <p class="text-sm text-purple-800 italic">"I have a potential demo in [X weeks] for [Customer]. Let's align on scope early so we can build something great."</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Decision Tree -->
+                    <div class="bg-white border-2 border-gray-300 rounded-lg p-6">
+                        <h3 class="text-lg font-bold text-gray-900 mb-4">🌳 Demo Scoping Decision Tree</h3>
+                        <div class="space-y-4 text-sm">
+                            <div class="flex items-start gap-3">
+                                <div class="bg-blue-100 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 font-bold text-blue-700">1</div>
+                                <div>
+                                    <p class="font-bold text-gray-900">Is this a strategic account or standard opportunity?</p>
+                                    <p class="text-gray-600">Strategic → Consider Tier 2/3 | Standard → Lean Tier 1/2</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="bg-purple-100 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 font-bold text-purple-700">2</div>
+                                <div>
+                                    <p class="font-bold text-gray-900">How much time do we have?</p>
+                                    <p class="text-gray-600">&lt;2 weeks → Tier 1 | 2-4 weeks → Tier 2 | 4+ weeks → Tier 3 possible</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="bg-green-100 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 font-bold text-green-700">3</div>
+                                <div>
+                                    <p class="font-bold text-gray-900">What's the competitive situation?</p>
+                                    <p class="text-gray-600">Heavy competition → May need higher tier | Sole vendor → Tier 1 often sufficient</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="bg-orange-100 rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 font-bold text-orange-700">4</div>
+                                <div>
+                                    <p class="font-bold text-gray-900">What will actually close this deal?</p>
+                                    <p class="text-gray-600">Sometimes a focused demo beats a comprehensive one. Quality > Quantity.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Best Practices -->
+                    <div class="bg-gradient-to-r from-green-50 to-blue-50 border-2 border-green-300 rounded-lg p-6">
+                        <h3 class="text-lg font-bold text-gray-900 mb-4">🌟 Best Practices for AE-SE Partnership</h3>
+                        <div class="grid md:grid-cols-2 gap-6 text-sm">
+                            <div>
+                                <p class="font-bold text-green-900 mb-2">✅ Do This:</p>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li>• Give as much lead time as possible</li>
+                                    <li>• Share customer context early</li>
+                                    <li>• Be open about timeline constraints</li>
+                                    <li>• Ask "what's realistic?" proactively</li>
+                                    <li>• Trust SE expertise on scope</li>
+                                    <li>• Celebrate wins together 🎉</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <p class="font-bold text-red-900 mb-2">❌ Avoid This:</p>
+                                <ul class="space-y-2 text-gray-700">
+                                    <li>• Last-minute demo requests</li>
+                                    <li>• Scope creep during build</li>
+                                    <li>• "Can you just add...?" 2 days before</li>
+                                    <li>• Comparing to unrealistic competitor demos</li>
+                                    <li>• Assuming AI = instant demos</li>
+                                    <li>• Promising features we can't deliver</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="bg-white rounded-xl shadow-lg p-6 text-center">
+            <p class="text-gray-600 mb-2">Questions? Let's talk through your next demo together.</p>
+            <p class="text-sm text-gray-500">Remember: Our goal is winning deals, not building perfect demos. Let's scope smart and execute well.</p>
+        </div>
+    </div>
+
+    <script>
+        function showTab(tabName) {
+            // Hide all content sections
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => section.classList.remove('active'));
+
+            // Remove active class from all buttons
+            const buttons = document.querySelectorAll('.tab-button');
+            buttons.forEach(button => button.classList.remove('active'));
+
+            // Show selected section
+            document.getElementById(tabName).classList.add('active');
+
+            // Add active class to clicked button
+            event.target.classList.add('active');
+        }
+
+        function calculateRealistic() {
+            const timeline = document.getElementById('timeline-select').value;
+            const stage = document.getElementById('stage-select').value;
+            const output = document.getElementById('recommendation-output');
+
+            if (!timeline || !stage) {
+                output.classList.add('hidden');
+                return;
+            }
+
+            output.classList.remove('hidden');
+
+            let recommendation = '';
+            let tier = '';
+            let color = '';
+
+            // Logic for recommendations
+            if (timeline === '1') {
+                tier = 'Tier 1';
+                color = 'green';
+                recommendation = `
+                    <div class="bg-green-50 border-2 border-green-400 rounded-lg p-6">
+                        <h3 class="text-xl font-bold text-green-900 mb-3">Recommended: ${tier} - Quick Hit Demo</h3>
+                        <p class="text-green-800 mb-4">With 1 week or less, we should focus on a proven, pre-built demo that shows core capabilities clearly.</p>
+                        <div class="space-y-2 text-sm text-green-900">
+                            <p><strong>What's realistic:</strong></p>
+                            <ul class="list-disc list-inside space-y-1 ml-4">
+                                <li>Pre-configured demo org with standard data</li>
+                                <li>1-2 dashboards showing key metrics</li>
+                                <li>Basic AI capability (insights or predictions)</li>
+                                <li>Generic but polished presentation</li>
+                            </ul>
+                            <p class="mt-3"><strong>What to skip:</strong> Custom data modeling, multi-cloud integration, complex AI agents</p>
+                        </div>
+                    </div>
+                `;
+            } else if (timeline === '2' || timeline === '3') {
+                if (stage === 'discovery') {
+                    tier = 'Tier 1-2';
+                    color = 'green';
+                    recommendation = `
+                        <div class="bg-green-50 border-2 border-green-400 rounded-lg p-6">
+                            <h3 class="text-xl font-bold text-green-900 mb-3">Recommended: ${tier} - Quick to Moderate Demo</h3>
+                            <p class="text-green-800 mb-4">For early-stage deals with 2-3 weeks, a Tier 1 demo is often sufficient. We could stretch to Tier 2 if this is strategic.</p>
+                            <div class="space-y-2 text-sm text-green-900">
+                                <p><strong>What's realistic:</strong></p>
+                                <ul class="list-disc list-inside space-y-1 ml-4">
+                                    <li>Industry-flavored demo (not fully custom)</li>
+                                    <li>3-4 relevant dashboards</li>
+                                    <li>2-3 AI capabilities working together</li>
+                                    <li>Some light customization possible</li>
+                                </ul>
+                                <p class="mt-3"><strong>Decision point:</strong> Is this a strategic account? If yes, let's go Tier 2. If standard opp, Tier 1 is smart.</p>
+                            </div>
+                        </div>
+                    `;
+                } else {
+                    tier = 'Tier 2';
+                    color = 'yellow';
+                    recommendation = `
+                        <div class="bg-yellow-50 border-2 border-yellow-400 rounded-lg p-6">
+                            <h3 class="text-xl font-bold text-yellow-900 mb-3">Recommended: ${tier} - Business Case Demo</h3>
+                            <p class="text-yellow-800 mb-4">With 2-3 weeks and mid/late-stage deal, we can build a solid industry-specific demo.</p>
+                            <div class="space-y-2 text-sm text-yellow-900">
+                                <p><strong>What's realistic:</strong></p>
+                                <ul class="list-disc list-inside space-y-1 ml-4">
+                                    <li>Industry-specific data and use cases</li>
+                                    <li>4-6 custom dashboards</li>
+                                    <li>3-5 AI capabilities integrated</li>
+                                    <li>Storytelling around their business problem</li>
+                                    <li>Light data modeling for key metrics</li>
+                                </ul>
+                                <p class="mt-3"><strong>What needs clarity:</strong> Which 3 capabilities are absolute must-haves? Let's nail those perfectly.</p>
+                            </div>
+                        </div>
+                    `;
+                }
+            } else if (timeline === '4') {
+                tier = 'Tier 2';
+                color = 'yellow';
+                recommendation = `
+                    <div class="bg-yellow-50 border-2 border-yellow-400 rounded-lg p-6">
+                        <h3 class="text-xl font-bold text-yellow-900 mb-3">Recommended: ${tier} - Strong Business Case Demo</h3>
+                        <p class="text-yellow-800 mb-4">With 4 weeks, we can build a comprehensive industry demo that addresses their specific pain points.</p>
+                        <div class="space-y-2 text-sm text-yellow-900">
+                            <p><strong>What's realistic:</strong></p>
+                            <ul class="list-disc list-inside space-y-1 ml-4">
+                                <li>Fully customized to their industry</li>
+                                <li>6-8 dashboards with drill-downs</li>
+                                <li>4-6 AI capabilities fully integrated</li>
+                                <li>Custom data model reflecting their structure</li>
+                                <li>Multi-product story (if relevant)</li>
+                            </ul>
+                            <p class="mt-3"><strong>Optional stretch:</strong> If this is a Tier 3 strategic account, we could consider limited multi-cloud integration.</p>
+                        </div>
+                    </div>
+                `;
+            } else {
+                tier = 'Tier 2-3';
+                color = 'red';
+                recommendation = `
+                    <div class="bg-red-50 border-2 border-red-400 rounded-lg p-6">
+                        <h3 class="text-xl font-bold text-red-900 mb-3">Recommended: ${tier} - Platform Vision Possible</h3>
+                        <p class="text-red-800 mb-4">With 6+ weeks, we have time to build something truly impressive if warranted by deal size.</p>
+                        <div class="space-y-2 text-sm text-red-900">
+                            <p><strong>What's realistic:</strong></p>
+                            <ul class="list-disc list-inside space-y-1 ml-4">
+                                <li>Multi-cloud integration (Sales + Service + Marketing + Data Cloud)</li>
+                                <li>End-to-end customer journey demos</li>
+                                <li>Full AI agent capabilities across workflows</li>
+                                <li>Custom data from their actual business (anonymized)</li>
+                                <li>White-glove, enterprise-grade demo</li>
+                            </ul>
+                            <p class="mt-3"><strong>Key question:</strong> Does the deal size justify this investment? Let's make sure this is truly strategic before committing to Tier 3.</p>
+                        </div>
+                    </div>
+                `;
+            }
+
+            output.innerHTML = recommendation;
+        }
+    </script>
+</body>
+</html>
